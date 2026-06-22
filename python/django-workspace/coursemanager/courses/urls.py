@@ -14,13 +14,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from courses.views import CourseDetailView
-from courses.views import CourseListView
+# courses/urls.py
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import CourseViewSet
+from .views import StudentViewSet
+from .views import EnrollmentViewSet
 
+# Create a router and register our viewsets with it.
+router = DefaultRouter()
+router.register(r'courses', CourseViewSet)
+router.register(r'students', StudentViewSet)
+router.register(r'enrollments', EnrollmentViewSet)
+
+# The API URLs are now determined automatically by the router.
 urlpatterns = [
-    path('courses/', CourseListView.as_view(), name='course-list'),
-    path('courses/<int:pk>/', CourseDetailView.as_view(), name='course-detail'),
+    path('', include(router.urls)),
 ]
 
