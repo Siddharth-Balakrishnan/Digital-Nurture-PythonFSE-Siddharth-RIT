@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <!-- Links the external CSS file as requested -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div>Student Portal</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Your one-stop dashboard to manage courses, view grades, and update your profile.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <section id="courses">
+            <h2>Available Courses</h2>
+            
+            <!-- Using article for self-contained course cards -->
+            <article class="course-card">
+                <h3>Frontend Development</h3>
+                <p>Learn HTML5, CSS3, and JavaScript basics.</p>
+                <span>3 Credits</span>
+            </article>
+
+            <article class="course-card">
+                <h3>Backend Architecture</h3>
+                <p>Introduction to server-side frameworks and APIs.</p>
+                <span>4 Credits</span>
+            </article>
+
+            <article class="course-card">
+                <h3>Cloud Infrastructure</h3>
+                <p>Deploying and scaling modern web applications.</p>
+                <span>3 Credits</span>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
