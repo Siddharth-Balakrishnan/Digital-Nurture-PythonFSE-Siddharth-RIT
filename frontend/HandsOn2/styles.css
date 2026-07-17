@@ -1,0 +1,187 @@
+/* =========================================
+   Base Styles & Reset
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+/* =========================================
+   Mobile-First Layout (Default)
+   ========================================= */
+
+/* Header & Navigation (Task 1) */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows nav to drop below title on small screens */
+}
+
+/* Task 3: Fluid Typography */
+.site-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: block; /* Visible on mobile */
+    cursor: pointer;
+}
+
+.main-nav {
+    display: none; /* Hidden by default on mobile, toggled via JS in later steps */
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack links on mobile */
+    gap: 15px;
+    align-items: center;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Hero Section (Task 1 & Task 3) */
+#hero {
+    text-align: center;
+    padding: 40px 20px; /* Smaller padding for mobile */
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh; /* Viewport Unit requirement */
+    gap: 15px;
+}
+
+#hero button {
+    padding: 10px 20px;
+    border: 2px solid #2c3e50;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#hero button:hover {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+/* Stats Bar (Task 1) */
+#stats-bar {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 10px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.stat {
+    flex: 1; /* Makes children grow equally */
+    text-align: center;
+}
+
+/* Courses Section (Task 2 & 3) */
+#courses {
+    padding: 40px 20px;
+}
+
+#courses h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* CSS Grid Course Layout */
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column default for mobile */
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    align-self: stretch; /* Fills grid cell */
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card span {
+    margin-top: auto; /* Pushes the credits span to the bottom of the card */
+    font-weight: bold;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* =========================================
+   Media Queries (Enhancements for larger screens)
+   ========================================= */
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide the hamburger menu */
+    }
+    
+    .main-nav {
+        display: flex; /* Show full nav */
+        width: auto;
+        margin-top: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal links */
+        gap: 20px;
+    }
+
+    #stats-bar {
+        flex-direction: row; /* Horizontal stats bar */
+        justify-content: space-evenly;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+        
+        /* Note: If adhering strictly to Step 23's self-responsive hint instead of explicit media queries, 
+           you would use: grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    #hero {
+        padding: 80px 20px; /* Increase hero section padding */
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    }
+}

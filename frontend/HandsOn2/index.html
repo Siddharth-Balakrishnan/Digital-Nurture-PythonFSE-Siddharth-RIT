@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="site-title">Student Portal</div>
+        <!-- Mobile hamburger placeholder -->
+        <div class="menu-toggle">☰ Menu</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Your one-stop dashboard to manage courses, view grades, and update your profile.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <!-- Task 1: Student Stats Bar -->
+        <section id="stats-bar">
+            <div class="stat">Courses Enrolled: 3</div>
+            <div class="stat">GPA: 3.8</div>
+            <div class="stat">Semester: 6</div>
+        </section>
+
+        <section id="courses">
+            <h2>Available Courses</h2>
+            
+            <!-- Task 2: Course Grid Wrapper -->
+            <div class="course-grid">
+                <article class="course-card">
+                    <h3>Frontend Development</h3>
+                    <p>Learn HTML5, CSS3, and JavaScript basics.</p>
+                    <span>3 Credits</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Backend Architecture</h3>
+                    <p>Introduction to server-side frameworks and APIs.</p>
+                    <span>4 Credits</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Deploying and scaling modern web applications.</p>
+                    <span>3 Credits</span>
+                </article>
+                
+                <!-- Task 2: Two Additional Course Cards -->
+                <article class="course-card">
+                    <h3>Database Management</h3>
+                    <p>Learn SQL, NoSQL, and database design principles.</p>
+                    <span>3 Credits</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>DevOps Fundamentals</h3>
+                    <p>CI/CD pipelines, containerization, and automation.</p>
+                    <span>4 Credits</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portal. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
