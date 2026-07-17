@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Hands On 3</title>
+    <style>
+        .course-card { border: 1px solid #ccc; padding: 15px; margin: 10px 0; cursor: pointer; }
+        .controls { margin-bottom: 20px; }
+        #selected-course { margin-top: 10px; color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="courses">
+            <h2>Available Courses</h2>
+            
+            <div class="controls">
+                <input type="text" id="search-courses" placeholder="Search courses...">
+                <button id="sort-credits">Sort by Credits</button>
+            </div>
+            
+            <div id="selected-course"></div>
+
+            <div class="course-grid"></div>
+            <p id="total-credits"></p>
+        </section>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
